@@ -15,7 +15,7 @@ class Application extends \Illuminate\Container\Container implements \Illuminate
 	/**
 	 * The application's version.
 	 */
-	const VERSION = '0.9.14';
+	const VERSION = '0.9.13';
 
 	/**
 	 * The application's version.
@@ -1149,11 +1149,15 @@ class Application extends \Illuminate\Container\Container implements \Illuminate
 	}
 
 	public function runningInConsole() {
-		return false;
+		return true;
+	}
+
+	public function runningUnitTests() {
+		return true;
 	}
 
 	public function getCachedPackagesPath() {
-		# code...
+		return true;
 	}
 
 }
